@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+apply from: '../constants.gradle'
+
+android {
+    compileSdkVersion project.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "org.qxtx.idea.adapter.recyclerview"
+        minSdkVersion project.ext.minSdkVersion
+        targetSdkVersion project.ext.targetSdkVersion
+        versionCode project.ext.versionCode
+        versionName project.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:' + supportLibraryVersion
+    testImplementation 'junit:junit:' + junitVersion
+    androidTestImplementation 'com.android.support.test:runner:' + testRunnerVersion
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:' + testEspresso
+    implementation 'com.android.support:recyclerview-v7:' + supportLibraryVersion
+}

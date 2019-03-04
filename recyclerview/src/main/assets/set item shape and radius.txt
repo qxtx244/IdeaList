@@ -1,0 +1,1 @@
+item take a parent is CardView.

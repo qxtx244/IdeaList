@@ -1,0 +1,13 @@
+project.ext {
+    versionCode = 1;
+    versionName = "1.0.0"
+    minSdkVersion = 21
+    targetSdkVersion = 26
+    compileSdkVersion = 26
+    buildToolsVersion = '26.1.0'
+    supportLibraryVersion = '26.1.0'
+    junitVersion = '4.12'
+    checkerframeworkVersion = '2.5.0'
+    testRunnerVersion = '0.5'
+    testEspresso = '3.0.1'
+}
